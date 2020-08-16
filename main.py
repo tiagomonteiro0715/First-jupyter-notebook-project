@@ -4,11 +4,11 @@ import pandas as pd
 
 df = pd.read_csv('diamonds.csv')
 
+#create a normal distribution
+#create a 3d graph - depth, clarity, z
+#create a 3d graph - x, y, z
 
-
-
-
-
+#short by cut
 
 
 
@@ -16,6 +16,7 @@ df = pd.read_csv('diamonds.csv')
 
 
 def main():
+    print(df)
     return 0
 
 
