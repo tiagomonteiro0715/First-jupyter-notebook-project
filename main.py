@@ -2,13 +2,25 @@ import matplotlib.pyplot as mpl
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv('diamonds.csv')
+df = pd.read_csv('StudentsPerformance.csv')
+#make a 3d graph
 
-#create a normal distribution
-#create a 3d graph - depth, clarity, z
-#create a 3d graph - x, y, z
+Data = {
+    'study' : len(df[df['test preparation course'] == "completed"]),
+    'not_study': len(df[df['test preparation course'] == "none"]),
+}
+studeName = list(Data.keys())
+studeval = list(Data.values())
 
-#short by cut
+def study():
+    mpl.bar(studeName, studeval)
+    mpl.show()
+
+
+
+
+
+
 
 
 
@@ -16,10 +28,7 @@ df = pd.read_csv('diamonds.csv')
 
 
 def main():
-    print(df)
-    return 0
-
-
+    study()
 
 if __name__ == "__main__":
     main()
